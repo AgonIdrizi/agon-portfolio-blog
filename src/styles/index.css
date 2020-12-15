@@ -1,0 +1,39 @@
+
+.dark {
+  --color-bg-primary: #2d3748;
+  --color-bg-secondary: #283141;
+  --color-text-primary: #f7fafc;
+  --color-text-secondary: #e2e8f0;
+  --color-text-accent: #81e6d9;
+}
+
+.light {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #edf2f7;
+  --color-text-primary: #2d3748;
+  --color-text-secondary: #4a5568;
+  --color-text-accent: #2b6cb0;
+}
+
+
+
+/* purgecss start ignore */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Your own custom component styles */
+
+/* purgecss end ignore */
+@import 'tailwindcss/utilities';
+
+
+.home-container {
+  transition: background-color 0.5s ease
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+}
+
