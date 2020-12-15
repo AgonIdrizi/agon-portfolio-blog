@@ -13,32 +13,6 @@ export default function Home() {
   const projectsDivRef = useRef(null);
   const contanctDivRef = useRef(null);
 
- 
-
-  // useScrollPosition(({ prevPos, currPos }, contentValue) => {
-  //   if(Math.abs(currPos.y)  <= aboutDivRef.current.offsetTop && Math.abs(currPos.y)  < projectsDivRef.current.offsetTop) {
-  //    if(contentValue !== 'about') {
-  //     setContentValue('about')
-     
-  //    }
-  //    console.log('about')
-  //     console.log('projectsDivRef.current.offsetTop', projectsDivRef.current.offsetTop)
-  //     console.log(' contanctDivRef.current.offsetTop', contanctDivRef.current.offsetTop)
-  //     console.log('currPos.y >= projectsDivRef.current.offsetTop', currPos.y >= projectsDivRef.current.offsetTop)
-  //   }
-    
-  //   if(Math.abs(currPos.y) >= projectsDivRef.current.offsetTop && Math.abs(currPos.y) < contanctDivRef.current.offsetTop) {
-  //     //if (contentValue !== 'projects') {
-  //       setContentValue('projects')
-       
-  //     //}
-  //     console.log('projects')
-  //   }
-  //   console.log(currPos.x)
-  //   console.log(currPos.y)
-  // })
-
- 
 
   return (
     <div className={`${theme} bg-primary  home-container`}>
