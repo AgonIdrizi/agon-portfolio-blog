@@ -1,73 +1,69 @@
 import React, { useState, useEffect } from "react";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
-import BreakLine from '../UI/BreakLine/BreakLine';
-import NavLink from './NavLink';
+import BreakLine from "../UI/BreakLine/BreakLine";
+import NavLink from "./NavLink";
+import { getDimensions, scrollTo } from '../../../utils/helpers';
 
-const NavLinks = ({ aboutDivRef, projectsDivRef, contanctDivRef }) => {
-  const [contentToScroll, setContentToScroll] = useState("about");
+
+const NavLinks = ({ headerRef, aboutDivRef, projectsDivRef, contanctDivRef }) => {
+  const [visibleSection, setVisibleSection] = useState();
   const [contentInView, setContentInView] = useState("about");
+  const sectionRefs = [
+    { section: "About", ref: aboutDivRef },
+    { section: "Projects", ref: projectsDivRef },
+    { section: "Contact", ref: contanctDivRef }
+  ];
+
   useEffect(() => {
-    console.log("useEffect runs", contentToScroll);
+    const handleScroll = () => {
+      const { height: headerHeight } = getDimensions(headerRef.current);
+      const scrollPosition = window.scrollY + headerHeight;
 
-    const ref =
-      contentToScroll === "about"
-        ? aboutDivRef
-        : contentToScroll === "projects"
-        ? projectsDivRef
-        : contanctDivRef;
-    window.scrollTo({
-      top: ref.current.offsetTop,
-      behavior: "smooth",
-    });
-  }, [contentToScroll]);
+      const selected: any = sectionRefs.find(({section, ref}) => {
+        const ele = ref.current;
+        if (ele) {
+          const { offsetBottom, offsetTop } = getDimensions(ele);
+          return scrollPosition > offsetTop && scrollPosition < offsetBottom;
+        }
+      });
 
-  useScrollPosition(({ prevPos, currPos }) => {
-    if (
-      Math.abs(currPos.y) <= aboutDivRef.current.offsetTop &&
-      Math.abs(currPos.y) < projectsDivRef.current.offsetTop
-    ) {
-      if (contentInView !== "about") {
-        setContentInView("about");
+      if (selected && selected.section !== visibleSection) {
+        setVisibleSection(selected.section);
+      } else if (!selected && visibleSection) {
+        setVisibleSection(undefined)
       }
-    }
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [visibleSection])
 
-    if (
-      Math.abs(currPos.y) >= projectsDivRef.current.offsetTop &&
-      Math.abs(currPos.y) < contanctDivRef.current.offsetTop
-    ) {
-      if (contentInView !== "projects") {
-        setContentInView("projects");
-      }
-    }
-    if (Math.abs(currPos.y) >= contanctDivRef.current.offsetTop) {
-      if (contentInView !== "contact") {
-        setContentInView("contact");
-      }
-    }
-  });
-
-  const onNavLinkClick = (e, value) => {
-    e.preventDefault();
-    setContentToScroll(value);
-    setContentInView(value);
-  };
 
   return (
     <div className="navlinks flex">
       <div>
-      <NavLink title="About" onNavLinkClick={onNavLinkClick} contentInView={contentInView} />
-        {contentInView === 'about' && <BreakLine /> }
-        
+        <NavLink
+          title="About"
+          onNavLinkClick={() => scrollTo(aboutDivRef.current)}
+          contentInView={visibleSection}
+        />
+        {visibleSection === "About" && <BreakLine />}
       </div>
       <div>
-        <NavLink title="Projects" onNavLinkClick={onNavLinkClick} contentInView={contentInView} />
-        {contentInView === 'projects' && <BreakLine /> }
-        
+        <NavLink
+          title="Projects"
+          onNavLinkClick={() => scrollTo(projectsDivRef.current)}
+          contentInView={visibleSection}
+        />
+        {visibleSection === "Projects" && <BreakLine />}
       </div>
       <div>
-      <NavLink title="Contact" onNavLinkClick={onNavLinkClick} contentInView={contentInView} />
-        {contentInView === 'contact' && <BreakLine />  }
-        
+        <NavLink
+          title="Contact"
+          onNavLinkClick={() => scrollTo(contanctDivRef.current)}
+          contentInView={visibleSection}
+        />
+        {visibleSection === "Contact" && <BreakLine />}
       </div>
     </div>
   );

@@ -8,7 +8,8 @@ import { withRouter } from "next/dist/client/router";
 
 export default function Home() {
   const [theme, setTheme] = useState("light");
- 
+  
+  const headerRef = useRef(null)
   const aboutDivRef = useRef(null);
   const projectsDivRef = useRef(null);
   const contanctDivRef = useRef(null);
@@ -16,8 +17,8 @@ export default function Home() {
 
   return (
     <div className={`${theme} bg-primary  home-container`}>
-      <div className="navbar top-0 absolute w-full flex justify-around">
-        <NavLinks aboutDivRef={aboutDivRef} projectsDivRef={projectsDivRef} contanctDivRef={contanctDivRef} />
+      <div ref={headerRef} className="navbar top-0 fixed w-full flex justify-around">
+        <NavLinks headerRef={headerRef} aboutDivRef={aboutDivRef} projectsDivRef={projectsDivRef} contanctDivRef={contanctDivRef} />
         <Toggle setTheme={setTheme} />
       </div>
       <div className="content flex-col justify-center">

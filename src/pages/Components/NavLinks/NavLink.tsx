@@ -4,9 +4,9 @@ const NavLink = ({ contentInView, title, onNavLinkClick }) => {
   const lowerCaseTitle = title.toLowerCase()
   return (
     <a
-      onClick={(e) => onNavLinkClick(e, lowerCaseTitle)}
+      onClick={() => onNavLinkClick()}
       className={`font-medium ${
-        contentInView === lowerCaseTitle ? "text-primary" : "text-secondary"
+        contentInView === title ? "text-primary" : "text-secondary"
       } m-2 hover:text-red-300 cursor-pointer`}
     >
       {title}
