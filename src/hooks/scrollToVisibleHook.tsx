@@ -7,7 +7,7 @@ export const useScrollToVisible = (headerRef, sectionRefs = []) => {
   useEffect(() => {
     const handleScroll = () => {
       const { height: headerHeight } = getDimensions(headerRef.current);
-      const scrollPosition = window.scrollY + headerHeight;
+      const scrollPosition = window.scrollY + headerHeight
 
       const selected: any = sectionRefs.find(({ section, ref }) => {
         const ele = ref.current;

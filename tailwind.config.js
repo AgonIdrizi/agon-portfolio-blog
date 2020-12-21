@@ -19,13 +19,17 @@ module.exports = {
       hover: {
         primary: 'black',
         secondary: 'red'
+      },
+      boxShadow: {
+        primary: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+        secondary: 'red'
       }
     },
   },
   
   variants: {
     extend: {
-      textOpacity: ['dark']
+      textOpacity: ['dark'],
     }
   },
   plugins: [],

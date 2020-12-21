@@ -6,8 +6,8 @@ const NavLink = ({ contentInView, title, onNavLinkClick }) => {
     <a
       onClick={() => onNavLinkClick()}
       className={`font-medium ${
-        contentInView === title ? "text-primary" : "text-secondary"
-      } m-2 hover:text-red-300 cursor-pointer`}
+        contentInView === title ? "text-red-300" : "text-secondary"
+      } m-2 hover:text-red-400 cursor-pointer`}
     >
       {title}
     </a>
