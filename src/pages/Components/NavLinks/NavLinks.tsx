@@ -20,7 +20,7 @@ const NavLinks = ({
   return (
     <div className="navlinks flex">
       {sectionRefs.map(({ section, ref }) => (
-        <div>
+        <div key={section}>
           <NavLink
             title={section}
             onNavLinkClick={() => scrollTo(ref.current)}

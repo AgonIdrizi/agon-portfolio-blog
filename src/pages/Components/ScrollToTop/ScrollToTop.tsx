@@ -18,14 +18,13 @@ const ScrollToTop = () => {
     window.addEventListener('scroll', handleScrollPos)
     return () => window.removeEventListener('scroll', handleScrollPos)
   },[isTopOfPage])
-
+  
   return !isTopOfPage 
     ? (<div onClick={() => window.scrollTo({top:0, behavior: 'smooth'})} className={scrollToTopClassNames}>
       <SvgArrowUpIcon />
     </div>) 
     : null
   
-    
 }
 
 export default ScrollToTop;
