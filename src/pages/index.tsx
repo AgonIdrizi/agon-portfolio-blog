@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Toggle from "./Components/UI/Toggle/Toggle";
 import NavLinks from './Components/NavLinks/NavLinks'
 import { withRouter } from "next/dist/client/router";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 
 
 export default function Home() {
@@ -42,16 +43,16 @@ export default function Home() {
         <section ref={projectsDivRef} className="projects-section flex flex-col w-500 mx-5 my-16 pt-4 sm:pt-8  justify-center place-items-start">
           <h2 className="text-primary text-2xl font-bold justify-center">Projects</h2>
           <div className="projects-content ">
-            <div className={`project-card h-32 w-64 my-10 ${theme === 'dark' ? 'bg-gray-100': ''} rounded-md  border-gray-200 shadow-md`}>
+            <div className={`project-card h-32 w-64 my-10 ${theme === 'dark' ? ' bg-red-100 text-accent': ''} rounded-md  border-gray-200 shadow-md`}>
               sdfdf
             </div>
-            <div className={`project-card h-32 w-64 my-10 ${theme === 'dark' ? 'bg-gray-100': ''} rounded-md  border-gray-200 shadow-md`}>
+            <div className={`project-card h-32 w-64 my-10 ${theme === 'dark' ? 'bg-red-100 text-accent': ''} rounded-md  border-gray-200 shadow-md`}>
               sdfdf
             </div>
-            <div className={`project-card h-32 w-64 my-10 ${theme === 'dark' ? 'bg-gray-100': ''} rounded-md  border-gray-200 shadow-md`}>
+            <div className={`project-card h-32 w-64 my-10 ${theme === 'dark' ? 'bg-red-100 text-accent': ''} rounded-md  border-gray-200 shadow-md`}>
               sdfdf
             </div>
-            <div className={`project-card h-32 w-64 my-10 ${theme === 'dark' ? 'bg-gray-100': ''} rounded-md  border-gray-200 shadow-md`}>
+            <div className={`project-card h-32 w-64 my-10 ${theme === 'dark' ? 'bg-red-100 text-accent': ''} rounded-md  border-gray-200 shadow-md`}>
               sdfdf
             </div>
           </div>
@@ -63,6 +64,7 @@ export default function Home() {
           </div>
         </section>
       </div>
+      <ScrollToTop />
     </div>
   );
 }

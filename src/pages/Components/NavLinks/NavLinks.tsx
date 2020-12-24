@@ -1,5 +1,4 @@
 import React, { useState, useCallback } from "react";
-import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import BreakLine from "../UI/BreakLine/BreakLine";
 import NavLink from "./NavLink";
 import { getDimensions, scrollTo } from "../../../utils/helpers";
