@@ -7,6 +7,7 @@ import { withRouter } from "next/dist/client/router";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 import Container from "./Components/Container";
 import ProjectCard from "./Components/ProjectCard";
+import BlogPost from "./Components/BlogPost";
 
 
 export default function Home() {
@@ -44,6 +45,12 @@ export default function Home() {
         </section>
         <section className="projects-section flex flex-col w-500 mx-5  pt-4 sm:pt-8  justify-center place-items-start">
           <h2 className="text-primary text-2xl md:text-4xl mb-6 font-bold justify-center">Blogs</h2>
+          <BlogPost 
+            title="The most important thing about Context Api"
+            summary="In this blog post I'm describing how default re-rendering of context-api works, and how we can optimizing to not re-render if it's value never changes!" 
+            slug="context-api-rerendering"
+          />
+          
         </section >
         <section ref={contanctDivRef} className="projects-section flex flex-col w-500  mx-5 mt-16 pt-4 sm:pt-8  justify-center place-items-start">
           <h2 className="text-primary text-2xl font-bold justify-center">Contact</h2>
