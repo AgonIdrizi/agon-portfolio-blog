@@ -1,14 +1,15 @@
 import Head from "next/head";
 import { useRef, useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Toggle from "./Components/UI/Toggle/Toggle";
 import NavLinks from './Components/NavLinks/NavLinks'
 import { withRouter } from "next/dist/client/router";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
+import Container from "./Components/Container";
 
 
 export default function Home() {
-  const [theme, setTheme] = useState("light");
+  
   
   const headerRef = useRef(null)
   const aboutDivRef = useRef(null);
@@ -17,42 +18,34 @@ export default function Home() {
 
 
   return (
-    <div className={`${theme} bg-primary  home-container`}>
-      <div ref={headerRef} className="navbar top-0 fixed w-full flex justify-around">
-        <NavLinks headerRef={headerRef} aboutDivRef={aboutDivRef} projectsDivRef={projectsDivRef} contanctDivRef={contanctDivRef} />
-        <Toggle setTheme={setTheme} />
-      </div>
+    <Container refs={{headerRef, aboutDivRef, projectsDivRef, contanctDivRef}}>
+      
       <div className="content flex-col pt-5  justify-center">
-        <section ref={aboutDivRef} className="about-section flex flex-col mx-5 my-20 pt-4 sm:pt-8 justify-center place-items-start">
-          <h2 className="text-primary font-bold text-2xl my-2 justify-start">Ktu Logoja</h2>
+        <section ref={aboutDivRef} className="about-section flex flex-col mx-5  justify-center place-items-start">
+          <h2 className="text-primary font-bold text-3xl md:text-5xl my-2 justify-start">Hi, I'm Agon Idrizi</h2>
           <div className="text-primary sm:max-w-2xl">
-            <p className=" break-all">
-              aasdas  dasdasdaasds dfsdfsdf  sdfsdfsdfsdfsdfsdfs dfsdfs dfsdfsdfsdfdsf
-            </p>
+            <h2 className="text-gray-600 dark:text-white  break-all">
+              I'm a developer, tech entusiast, writer. My passion is building web applications from ground to mature products. There is more info in about section!
+            </h2>
             <p className="break-all">
               aasdasdasd asdaasd sdfsdf  sdfsdfsdfsdfsdf sdfsdfsdfsd fsdfsdfsdfsdfds fsdfsdxvdsf gwess
             </p>
-            <p className="break-all">
-              aasdasdasd asdaasdsdfsdfsd fsdfsdfs dfsdfsd fsdfsdfsdfsdfsd fsdfsd fdsfs dfsdxvdsfgwess
-            </p>
-            <p className="break-all">
-              aasdasda sdasdaas dsd fsdfsdfsdf sdfsdfsdfsdfsd fsdfsdfsdfsd sdfsdfdsfs dfsdxvdsfg wess
-            </p>
+            
           </div>
         </section>
         <section ref={projectsDivRef} className="projects-section flex flex-col w-500 mx-5 my-16 pt-4 sm:pt-8  justify-center place-items-start">
           <h2 className="text-primary text-2xl font-bold justify-center">Projects</h2>
           <div className="projects-content ">
-            <div className={`project-card h-32 w-64 my-10 ${theme === 'dark' ? ' bg-red-100 text-accent': ''} rounded-md  border-gray-200 shadow-md`}>
+            <div className={`project-card h-32 w-64 my-10 ${ 'dark' ? ' bg-red-100 text-accent': ''} rounded-md  border-gray-200 shadow-md`}>
               sdfdf
             </div>
-            <div className={`project-card h-32 w-64 my-10 ${theme === 'dark' ? 'bg-red-100 text-accent': ''} rounded-md  border-gray-200 shadow-md`}>
+            <div className={`project-card h-32 w-64 my-10 ${ 'dark' ? 'bg-red-100 text-accent': ''}  rounded-md  border-gray-200 shadow-md`}>
               sdfdf
             </div>
-            <div className={`project-card h-32 w-64 my-10 ${theme === 'dark' ? 'bg-red-100 text-accent': ''} rounded-md  border-gray-200 shadow-md`}>
+            <div className={`project-card h-32 w-64 my-10 ${ 'dark' ? 'bg-red-100 text-accent': ''} rounded-md  border-gray-200 shadow-md`}>
               sdfdf
             </div>
-            <div className={`project-card h-32 w-64 my-10 ${theme === 'dark' ? 'bg-red-100 text-accent': ''} rounded-md  border-gray-200 shadow-md`}>
+            <div className={`project-card h-32 w-64 my-10 ${'dark' ? 'bg-red-100 text-accent': ''} rounded-md  border-gray-200 shadow-md`}>
               sdfdf
             </div>
           </div>
@@ -64,7 +57,7 @@ export default function Home() {
           </div>
         </section>
       </div>
-      <ScrollToTop />
-    </div>
+        <ScrollToTop />
+    </Container>
   );
 }
