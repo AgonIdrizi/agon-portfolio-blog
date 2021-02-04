@@ -18,7 +18,7 @@ const Container = (props) => {
   };
 
   return (
-    <div className={` bg-primary dark:bg-black  home-container`}>
+    <div className={` bg-primary dark:bg-secondary  home-container`}>
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -38,11 +38,14 @@ const Container = (props) => {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <div ref={refs.headerRef} className="navbar top-0  max-w-4xl p-8 my-0 md:my-8 mx-auto bg-opacity-60 w-full flex items-center justify-between">
+      <div ref={refs.headerRef} className="navbar top-0  max-w-4xl p-8 my-0 md:my-8 mx-auto dark:bg-secondary bg-opacity-60 w-full flex items-center justify-between">
         <NavLinks headerRef={refs.headerRef} aboutDivRef={refs.aboutDivRef} projectsDivRef={refs.projectsDivRef} contanctDivRef={refs.contanctDivRef} />
         <Toggle setTheme={setTheme} />
       </div>
+      <main className="flex flex-col justify-center px-8"> 
       {children}
+      </main>
+     
     </div>
   );
 };
