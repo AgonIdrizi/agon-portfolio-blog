@@ -34,6 +34,11 @@
     U+FEFF, U+FFFD;
 }
 
+::selection {
+  background-color: #47a3f3;
+  color: #fefefe;
+}
+
 html {
   min-width: 360px;
   scroll-behavior: smooth;
@@ -56,7 +61,7 @@ html {
   transition: background-color 0.1 ease-in-out;
 }
 .navbar-effect {
-  backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(110%) blur(20px);
 }
 
 .content {

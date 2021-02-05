@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from "react";
 import BreakLine from "../UI/BreakLine/BreakLine";
 import NavLink from "./NavLink";
-import { getDimensions, scrollTo } from "../../../utils/helpers";
-import { useScrollToVisible } from "../../../hooks/scrollToVisibleHook";
+import { getDimensions, scrollTo } from "../../utils/helpers";
+import { useScrollToVisible } from "../../hooks/scrollToVisibleHook";
 
 const NavLinks = ({
   headerRef,

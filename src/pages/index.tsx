@@ -1,13 +1,13 @@
 import Head from "next/head";
 import { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Toggle from "./Components/UI/Toggle/Toggle";
-import NavLinks from './Components/NavLinks/NavLinks'
+import Toggle from "../components/UI/Toggle/Toggle";
+import NavLinks from '../components/NavLinks/NavLinks'
 import { withRouter } from "next/dist/client/router";
-import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
-import Container from "./Components/Container";
-import ProjectCard from "./Components/ProjectCard";
-import BlogPost from "./Components/BlogPost";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+import Container from "../components/Container";
+import ProjectCard from "../components/ProjectCard";
+import BlogPost from "../components/BlogPost";
 
 
 export default function Home() {

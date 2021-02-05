@@ -1,7 +1,7 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SvgArrowUpIcon from "./SvgArrowUpIcon";
-import { scrollTo } from "../../../utils/helpers";
+import { scrollTo } from "../../utils/helpers";
 
 const divVariant = {
   hidden: {

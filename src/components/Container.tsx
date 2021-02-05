@@ -38,7 +38,7 @@ const Container = (props) => {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <div ref={refs.headerRef} className={`navbar ${theme === 'light' ? 'navbar-effect' : 'bg-secondary'} top-0  max-w-4xl p-8 my-0 md:my-8 mx-auto bg-opacity-60 w-full flex items-center justify-between`}>
+      <div ref={refs.headerRef} className={`navbar navbar-effect top-0  max-w-4xl p-8 my-0 md:my-8 mx-auto bg-opacity-60 w-full flex items-center justify-between`}>
         <NavLinks headerRef={refs.headerRef} aboutDivRef={refs.aboutDivRef} projectsDivRef={refs.projectsDivRef} contanctDivRef={refs.contanctDivRef} />
         <Toggle setTheme={setTheme} />
       </div>
