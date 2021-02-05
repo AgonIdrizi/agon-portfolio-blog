@@ -6,7 +6,7 @@ const ProjectCard = ({title, description, href, icon}) => {
         <div>{icon}</div>
         <div>
           <h4 className="text-lg font-bold tracking-tight text-primary dark:text-gray-100">{title}</h4>
-          <p className="leading-5 text-gray-700 dark:text-gray-300">{description}</p>
+          <p className="leading-5 text-sm md:text-base lg:text-base text-gray-700 dark:text-gray-300">{description}</p>
         </div>
     </div>
   );
