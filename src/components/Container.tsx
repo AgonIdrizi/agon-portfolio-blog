@@ -23,7 +23,7 @@ const Container = (props) => {
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`https://leerob.io${router.asPath}`} />
+        <meta property="og:url" content={`https://agon.dev${router.asPath}`} />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Lee Robinson" />
         <meta property="og:description" content={meta.description} />
