@@ -37,7 +37,7 @@ export default function Home() {
             <ProjectCard 
               title="My Dinner" 
               description="Online food delivery service for local fast foods built with React.js" 
-              href="" 
+              href="/projects/agon-test" 
               icon="" />
             <ProjectCard title="Where's Waldo" description="" href="" icon="" />
             <ProjectCard title="Fast replies" description="" href="" icon="" />
