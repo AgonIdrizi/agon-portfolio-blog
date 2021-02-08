@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
 import Head from "next/head";
@@ -8,6 +8,7 @@ import Toggle from './UI/Toggle/Toggle'
 const Container = (props) => {
   const router = useRouter();
   const { theme, setTheme } = useTheme();
+  const headerRef = useRef(null)
   const { children, refs, ...customMeta } = props;
   const meta = {
     title: "Agon Idrizi",
@@ -37,8 +38,8 @@ const Container = (props) => {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <div ref={refs.headerRef} className={`navbar navbar-effect top-0  max-w-4xl p-8 my-0 md:my-8 mx-auto bg-opacity-60 w-full flex items-center justify-between`}>
-        <NavLinks headerRef={refs.headerRef} aboutDivRef={refs.aboutDivRef} projectsDivRef={refs.projectsDivRef} contanctDivRef={refs.contanctDivRef} />
+      <div ref={headerRef} className={`navbar navbar-effect top-0  max-w-4xl p-8 my-0 md:my-8 mx-auto bg-opacity-60 w-full flex items-center justify-between`}>
+       {refs &&<NavLinks headerRef={headerRef} aboutDivRef={refs.aboutDivRef} projectsDivRef={refs.projectsDivRef} contanctDivRef={refs.contanctDivRef} /> }
         <Toggle setTheme={setTheme} />
       </div>
       <main className="flex flex-col justify-center px-8"> 

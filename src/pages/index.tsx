@@ -13,14 +13,14 @@ import BlogPost from "../components/BlogPost";
 export default function Home() {
   
   
-  const headerRef = useRef(null)
+  
   const aboutDivRef = useRef(null);
   const projectsDivRef = useRef(null);
   const contanctDivRef = useRef(null);
 
 
   return (
-    <Container refs={{headerRef, aboutDivRef, projectsDivRef, contanctDivRef}}>
+    <Container refs={{ aboutDivRef, projectsDivRef, contanctDivRef}}>
       
       <div className="flex flex-col items-start max-w-2xl mx-auto mb-16  justify-center">
         <section ref={aboutDivRef} className="about-section flex flex-col mx-5  justify-center place-items-start">

@@ -1,11 +1,19 @@
 import { AppProps } from 'next/app'
+import {MDXProvider} from '@mdx-js/react'
 import { ThemeProvider } from 'next-themes';
+import MDXComponents from '../components/MDXComponents';
+
 import '../styles/index.css'
+
+
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class">
-      <Component {...pageProps} />
+      <MDXProvider components={MDXComponents}>
+        <Component {...pageProps} />
+      </MDXProvider>
     </ThemeProvider>
   );
 }
