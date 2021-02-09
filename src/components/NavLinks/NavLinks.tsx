@@ -6,14 +6,14 @@ import { useScrollToVisible } from "../../hooks/scrollToVisibleHook";
 
 const NavLinks = ({
   headerRef,
-  aboutDivRef,
+  homeDivRef,
   projectsDivRef,
-  contanctDivRef,
+  aboutDivRef,
 }) => {
   const sectionRefs = [
-    { section: "About", ref: aboutDivRef },
+    { section: "Home", ref: homeDivRef },
     { section: "Projects", ref: projectsDivRef },
-    { section: "Contact", ref: contanctDivRef },
+    { section: "About", ref: aboutDivRef },
   ];
   const [visibleSection] = useScrollToVisible(headerRef, sectionRefs);
 

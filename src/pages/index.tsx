@@ -10,16 +10,16 @@ export default function Home() {
   
   
   
-  const aboutDivRef = useRef(null);
+  const homeDivRef = useRef(null);
   const projectsDivRef = useRef(null);
-  const contanctDivRef = useRef(null);
+  const aboutDivRef = useRef(null);
 
 
   return (
-    <Container refs={{ aboutDivRef, projectsDivRef, contanctDivRef}}>
+    <Container refs={{ homeDivRef, projectsDivRef, aboutDivRef}}>
       
       <div className="flex flex-col items-start max-w-2xl mx-auto mb-16  justify-center">
-        <section ref={aboutDivRef} className="about-section flex flex-col mx-5  justify-center place-items-start">
+        <section ref={homeDivRef} className="about-section flex flex-col mx-5  justify-center place-items-start">
           <h2 className="text-primary font-bold text-3xl md:text-5xl my-2 justify-start">Hi, I'm Agon!</h2>
           <div className="text-primary  sm:max-w-2xl">
             <h2 className="text-gray-600 leading-6 text-sm md:text-base lg:text-lg  dark:text-gray-200  break-all">
@@ -48,14 +48,14 @@ export default function Home() {
           />
           
         </section >
-        <section ref={contanctDivRef} className="projects-section flex flex-col w-500  mx-5 mt-16 pt-4 sm:pt-8  justify-center place-items-start">
-          <h2 className="text-primary text-2xl font-bold justify-center">Contact</h2>
+        <section ref={aboutDivRef} className="projects-section flex flex-col w-500  mx-5 mt-16 pt-4 sm:pt-8  justify-center place-items-start">
+          <h2 className="text-primary text-2xl font-bold justify-center">About</h2>
           <div className="contacts-content text-sm md:text-base lg:text-base text-primary">
             Reach me through my email: agon@agon.com
           </div>
         </section>
       </div>
-        <ScrollToTop />
+        
     </Container>
   );
 }
