@@ -11,8 +11,9 @@ export const getDimensions = ele => {
 }
 
 export const scrollTo = ele => {
-  ele.scrollIntoView({
+  const {offsetTop} = getDimensions(ele)
+  window.scrollTo({
+    top: offsetTop - 80,
     behavior: "smooth",
-    block: "start"
   })
 }

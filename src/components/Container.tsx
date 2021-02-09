@@ -4,14 +4,16 @@ import { useTheme } from 'next-themes';
 import Head from "next/head";
 import NavLinks from './NavLinks/NavLinks';
 import Toggle from './UI/Toggle/Toggle'
+import NavLink, {NextLink} from "./NavLinks/NavLink";
 
 const Container = (props) => {
   const router = useRouter();
+  const isHomePage = router.pathname === "/";
   const { theme, setTheme } = useTheme();
   const headerRef = useRef(null)
   const { children, refs, ...customMeta } = props;
   const meta = {
-    title: "Agon Idrizi",
+    title: "Agon Idrizi | Personal Portfolio",
     description: `Front-end developer, Javascript enthusiast, blog writer.`,
     image: "",
     type: "website",
@@ -39,7 +41,8 @@ const Container = (props) => {
         )}
       </Head>
       <div ref={headerRef} className={`navbar navbar-effect top-0  max-w-4xl p-8 my-0 md:my-8 mx-auto bg-opacity-60 w-full flex items-center justify-between`}>
-       {refs &&<NavLinks headerRef={headerRef} aboutDivRef={refs.aboutDivRef} projectsDivRef={refs.projectsDivRef} contanctDivRef={refs.contanctDivRef} /> }
+       {refs && isHomePage && <NavLinks headerRef={headerRef} aboutDivRef={refs.aboutDivRef} projectsDivRef={refs.projectsDivRef} contanctDivRef={refs.contanctDivRef} /> }
+       {!isHomePage && <NextLink href="/" title="Home" />}
         <Toggle setTheme={setTheme} />
       </div>
       <main className="flex flex-col justify-center px-8"> 

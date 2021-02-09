@@ -10,7 +10,6 @@ import MDXComponents from '../components/MDXComponents';
 const root = process.cwd() + '/src';
 
 export async function getFiles(type) {
-  console.log('root', root)
   return fs.readdirSync(path.join(root, 'data', type))
 }
 
