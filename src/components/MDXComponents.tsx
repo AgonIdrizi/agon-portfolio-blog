@@ -8,7 +8,7 @@ const CustomLink = (props) => {
   if (isInternalLink) {
     return (
       <Link href={href}>
-        <a {...props} />
+        <a className="text-blue-500" {...props} />
       </Link>
     );
   }
@@ -16,9 +16,15 @@ const CustomLink = (props) => {
   return <a target="_blank" rel="noopener noreferrer" {...props} />
 }
 
+const heading2 = ({children}) => (
+  <h2 className="text-2xl font-bold tracking-tight text-primary dark:text-gray-100">{children}</h2>
+)
+
 const MDXComponents = {
   Image,
-  a: CustomLink
+  a: CustomLink,
+  heading2,
+
 }
 
 export default MDXComponents;

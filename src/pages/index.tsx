@@ -31,9 +31,9 @@ export default function Home() {
           <h2 className="text-primary text-2xl md:text-4xl mb-6 font-bold justify-center">Projects</h2>
           <div className="projects-content ">
             <ProjectCard 
-              title="My Dinner" 
-              description="Online food delivery service for local fast foods built with React.js" 
-              slug="agon-test" 
+              title="St Logic" 
+              description="Tutoring management system that prepares students for standardised tests and national exams" 
+              slug="st-logic" 
               icon="" />
             <ProjectCard title="Where's Waldo" description="" slug="" icon="" />
             <ProjectCard title="Fast replies" description="" slug="" icon="" />

@@ -29,5 +29,5 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const post = await getFileBySlug('project', params.slug)
 
-  return { props: post };
+  return { props: post , revalidate: 1};
 }

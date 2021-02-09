@@ -1,6 +1,9 @@
 import Image from 'next/image';
 import Container from '../components/Container';
 
+const editUrl = (slug) =>
+  `https://github.com/agonidrizi/agon.dev/edit/main/data/project/${slug}.mdx`;
+
 export default function ProjectLayout({ children, frontMatter}) {
   return (
     <Container
