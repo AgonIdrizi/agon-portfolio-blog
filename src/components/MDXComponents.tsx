@@ -13,7 +13,7 @@ const CustomLink = (props) => {
     );
   }
 
-  return <a target="_blank" rel="noopener noreferrer" {...props} />
+  return <a className="text-blue-500" target="_blank" rel="noopener noreferrer" {...props} />
 }
 
 const heading2 = ({children}) => (

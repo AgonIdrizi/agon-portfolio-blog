@@ -35,8 +35,8 @@ export default function Home() {
               description="Tutoring management system that prepares students for standardised tests and national exams" 
               slug="st-logic" 
               icon="" />
-            <ProjectCard title="Where's Waldo" description="" slug="" icon="" />
-            <ProjectCard title="Fast replies" description="" slug="" icon="" />
+            <ProjectCard title="My Dinner" description="My dinner is a web application for order/delivery of food" slug="my-dinner" icon="" />
+            <ProjectCard title="Agon.dev" description="My personal portfolio built with Next.js" slug="agon-portfolio" icon="" />
           </div>
         </section>
         <section className="projects-section flex flex-col w-500 mx-5  pt-4 sm:pt-8  justify-center place-items-start">
