@@ -1,17 +1,14 @@
 import React, {useState, useRef} from "react";
 import { useRouter } from 'next/router';
-import { useTheme } from 'next-themes';
+
 import Head from "next/head";
 import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
-import NavLinks from './NavLinks/NavLinks';
-import Toggle from './UI/Toggle/Toggle'
-import NavLink, {NextLink} from "./NavLinks/NavLink";
+
+import Header from "./Header";
 
 const Container = (props) => {
   const router = useRouter();
-  const isHomePage = router.pathname === "/";
-  const { theme, setTheme } = useTheme();
-  const headerRef = useRef(null)
+  
   const { children, refs, ...customMeta } = props;
   const meta = {
     title: "Agon Idrizi | Personal Portfolio",
@@ -41,11 +38,7 @@ const Container = (props) => {
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <div ref={headerRef} className={`navbar navbar-effect top-0  max-w-4xl p-4 md:p-8 my-0 md:my-8 mx-auto bg-opacity-60 w-full flex items-center justify-between`}>
-       {refs && isHomePage && <NavLinks headerRef={headerRef} homeDivRef={refs.homeDivRef} projectsDivRef={refs.projectsDivRef} aboutDivRef={refs.aboutDivRef} /> }
-       {!isHomePage && <NextLink href="/" title="Home" />}
-        <Toggle setTheme={setTheme} />
-      </div>
+      <Header refs={refs}  />
       <main className="flex flex-col justify-center px-8"> 
       {children}
       </main>

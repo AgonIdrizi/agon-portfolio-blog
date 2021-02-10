@@ -30,7 +30,6 @@ export async function getFileBySlug(type, slug) {
       rehypePlugins: [mdxPrism]
     }
   });
-  console.log('mdxSource', mdxSource)
 
   return {
     mdxSource,
