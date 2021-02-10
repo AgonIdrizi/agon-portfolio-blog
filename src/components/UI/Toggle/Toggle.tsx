@@ -1,5 +1,8 @@
+import { useTheme } from 'next-themes';
 import styles from './styles.module.css'
-export default function ({setTheme}) {
+
+export default function Toggle () {
+  const { theme, setTheme } = useTheme();
   return (
     <div className="flex items-center justify-center ">
       <label htmlFor="toogleA" className="flex items-center cursor-pointer">
@@ -7,6 +10,7 @@ export default function ({setTheme}) {
           <input
             id="toogleA"
             type="checkbox"
+            checked={theme === "dark"}
             onChange={(e) => setTheme(e.target.checked ? "dark" : "light")}
             className="hidden"
           />

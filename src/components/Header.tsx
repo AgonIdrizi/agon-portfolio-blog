@@ -1,5 +1,4 @@
 import React, {useRef, useEffect} from 'react';
-import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router';
 import NavLinks from './NavLinks/NavLinks';
 import Toggle from './UI/Toggle/Toggle'
@@ -9,7 +8,7 @@ import NavLink, {NextLink} from "./NavLinks/NavLink";
 const Header = ({refs}) => {
   const router = useRouter();
   const headerRef = useRef(null)
-  const { theme, setTheme } = useTheme();
+
   const isHomePage = router.pathname === "/";
 
   useEffect(() => {
@@ -19,6 +18,7 @@ const Header = ({refs}) => {
 
     var prevScrollpos = window.pageYOffset;
     const handleVisibleHeaderScroll = () => {
+      
       const currentScrollPos = window.pageYOffset;
 
       if(prevScrollpos > currentScrollPos) {
@@ -28,7 +28,8 @@ const Header = ({refs}) => {
         document.querySelector('.navbar').style.top = "-72px"
        
       }
-    prevScrollpos = currentScrollPos
+
+      prevScrollpos = currentScrollPos
 
     }
     if(!isHomePage && isMobile) {
@@ -47,7 +48,7 @@ const Header = ({refs}) => {
     <div ref={headerRef} className={`navbar navbar-effect top-0  max-w-4xl p-4 md:p-8 my-0 md:my-8 mx-auto bg-opacity-60 w-full flex items-center justify-between`}>
        {refs && isHomePage && <NavLinks headerRef={headerRef} homeDivRef={refs.homeDivRef} projectsDivRef={refs.projectsDivRef} aboutDivRef={refs.aboutDivRef} /> }
        {!isHomePage && <NextLink href="/" title="Home" />}
-        <Toggle setTheme={setTheme} />
+        <Toggle />
       </div>
   );
 }
