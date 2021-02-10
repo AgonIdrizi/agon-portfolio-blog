@@ -43,7 +43,7 @@ export default function Home() {
           <h2 className="text-primary text-2xl md:text-4xl mb-6 font-bold justify-center">Blogs</h2>
           <BlogPost 
             title="The most important thing about Context Api"
-            summary="In this blog post I'm describing how default re-rendering of context-api works, and how we can optimize to not re-render if it's value never changes!" 
+            summary="In this blog post I'm describing how default re-rendering of context-api works, and how we can optimize re-renders of child components!" 
             slug="context-api-rerendering"
           />
           

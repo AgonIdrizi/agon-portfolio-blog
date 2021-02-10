@@ -5,6 +5,7 @@ import Head from "next/head";
 import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
 
 import Header from "./Header";
+import Footer from "./Footer";
 
 const Container = (props) => {
   const router = useRouter();
@@ -41,7 +42,9 @@ const Container = (props) => {
       <Header refs={refs}  />
       <main className="flex flex-col justify-center px-8"> 
       {children}
+      <Footer />
       </main>
+      
       <ScrollToTop />
     </div>
   );
