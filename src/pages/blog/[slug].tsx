@@ -1,7 +1,7 @@
 import hydrate from 'next-mdx-remote/hydrate';
 
 import {getFiles, getFileBySlug} from '../../lib/mdx';
-import ProjectLayout from '../../layout/project';
+import BlogLayout from '../../layout/blog';
 import MDXComponents from '../../components/MDXComponents';
 
 
@@ -10,7 +10,7 @@ export default function Project({mdxSource, frontMatter}) {
     components: MDXComponents
   });
 
-  return <ProjectLayout frontMatter={frontMatter}>{content}</ProjectLayout>
+  return <BlogLayout frontMatter={frontMatter}>{content}</BlogLayout>
 }
 
 export async function getStaticPaths() {
