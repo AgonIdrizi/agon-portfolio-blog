@@ -50,7 +50,7 @@ class MyDocument extends Document {
           <meta content="14d2e73487fa6c71" name="yandex-verification" />
           
         </Head>
-        <body className="bg-white dark:bg-black text-white dark:text-black">
+        <body className="bg-white dark:bg-black text-white dark:text-black whitespace-pre-wrap break-words">
           <Main />
           <NextScript />
         </body>

@@ -5,10 +5,10 @@ summary: 'Understanding how Context Api re-renders and how we can optimize it fo
 image: '/static/images/agon-test/st-logic-1.png'
 ---
 
-If you work on a front-end React app, most probably in some part of your application you'll use Context-api.
-Building a ThemeProvider or AuthProvider is common usage of Context-api.
+If you work on a front-end React app, most probably in some part of your application you'll use Context-API.
+Building a ThemeProvider or AuthProvider is a common usage of Context-API.
 
-In this guide we'll demonstrate in which situations ContextProvider re-renders and how it affects it's children.
+In this guide, we'll demonstrate in which situations ContextProvider re-renders and how it affects its children.
 We'll also see that even if children components use optimizations strategies like React.memo, they will re-render if their Context provider re-renders!
 
 First we create our context:
@@ -56,7 +56,7 @@ const ThemeButton = React.memo(() => {
 });
 ```
 
-Finally our App component looks like this:
+Finally, our App component looks like this:
 
 ```jsx
 function App() {
@@ -74,14 +74,14 @@ function App() {
 
 <br />{' '}
 
-Now let's try something, if we click the Count button, state inside App will change and App will re-render, making all it's children components to re-render.
+Now let's try something, if we click the Count button, state inside App will change and App will re-render, making all its children components to re-render.
 
-When parent component of a provider re-renders, then ProviderComponent will re-render and all it's children too, this is default behaviour!
+When the parent component of a provider re-renders, then ProviderComponent will re-render and all it's children too, this is default behaviour!
 
-We have wrapped children components with React.memo, but still they do re-render, why this is happening?!
+We have wrapped children components with React.memo, but still, they do re-render. Why this is happening?!
 
 The take-away here is: **if ProviderComponent
-re-renders, all it's children will re-render, even if they are wrapped and optimized with
+re-renders, all its children will re-render, even if they are wrapped and optimized with
 React.memo**.
 
 Each time ThemeProvider re-renders, it creates new value variable:
@@ -90,7 +90,7 @@ Each time ThemeProvider re-renders, it creates new value variable:
 const value = { theme, setTheme };
 ```
 
-Thus making it's children to re-render!
+Thus making its children re-render!
 
 We can optimize this by wrapping value with React.useMemo (<a href='https://reactjs.org/docs/hooks-reference.html#usememo'>useMemo docs</a>), and changeTheme with useCallback (<a href='https://reactjs.org/docs/hooks-reference.html#usecallback'>useCallback docs</a>).
 
@@ -114,4 +114,4 @@ Now if we click Count button, ThemeDisplay and ThemeButton will not re-render!
 
 Play with it in CodeSandbox: <a href="https://codesandbox.io/s/lively-resonance-bg9lg?file=/src/App.js">CodeSandbox</a>
 
-Redux uses Context under the hood and they optimize Providers too, but that's for some other post:). Hope this will help someone!
+Redux uses Context under the hood and they optimize Providers too. Hope this will help someone!

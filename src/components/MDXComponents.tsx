@@ -8,12 +8,12 @@ const CustomLink = (props) => {
   if (isInternalLink) {
     return (
       <Link href={href}>
-        <a className="text-blue-500" {...props} />
+        <a className="text-blue-500 dark:text-blue-300" {...props} />
       </Link>
     );
   }
 
-  return <a className="text-blue-500" target="_blank" rel="noopener noreferrer" {...props} />
+  return <a className="text-blue-500 dark:text-blue-300" target="_blank" rel="noopener noreferrer" {...props} />
 }
 
 const heading2 = ({children}) => (

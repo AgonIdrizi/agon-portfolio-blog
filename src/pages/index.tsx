@@ -23,7 +23,7 @@ export default function Home() {
           <h2 className="text-primary font-bold text-3xl md:text-5xl my-2 justify-start">Hi, I'm Agon!</h2>
           <div className="text-primary  sm:max-w-2xl">
             <h2 className="text-gray-600 leading-6 text-sm md:text-base lg:text-lg  dark:text-gray-200  break-all">
-              I'm a front end developer, building websites with React and Typescript. Sometimes i write blogs and capture beauty of the world with my fuji camera!
+            I'm a full-stack web developer with a focus on React and Typescript. Sometimes I write blogs and capture the beauty of the world with my fuji camera!
             </h2>
           </div>
         </section>
@@ -32,7 +32,7 @@ export default function Home() {
           <div className="projects-content ">
             <ProjectCard 
               title="St Logic" 
-              description="Tutoring management system that prepares students for standardised tests and national exams" 
+              description="Tutoring management system that prepares students for standardized tests and national exams" 
               slug="st-logic" 
               icon="" />
             <ProjectCard title="My Dinner" description="My dinner is a web application for order/delivery of food" slug="my-dinner" icon="" />
@@ -43,7 +43,7 @@ export default function Home() {
           <h2 className="text-primary text-2xl md:text-4xl mb-6 font-bold justify-center">Blogs</h2>
           <BlogPost 
             title="The most important thing about Context Api"
-            summary="In this blog post I'm describing how default re-rendering of context-api works, and how we can optimize re-renders of child components!" 
+            summary="In this blog post, I'm describing how default re-rendering of context-API works, and how we can optimize re-renders of child components!" 
             slug="context-api-rerendering"
           />
           
