@@ -21,11 +21,13 @@ const Header = ({refs}) => {
       
       const currentScrollPos = window.pageYOffset;
 
+      const navbar: HTMLElement = document.querySelector('.navbar')
+      
       if(prevScrollpos > currentScrollPos) {
-        document.querySelector('.navbar').style.top = "0"
+        navbar.style.top = "0"
        
       } else {
-        document.querySelector('.navbar').style.top = "-72px"
+        navbar.style.top = "-72px"
        
       }
 
