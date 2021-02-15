@@ -20,10 +20,17 @@ const heading2 = ({children}) => (
   <h2 className="text-2xl font-bold tracking-tight text-primary dark:text-gray-100">{children}</h2>
 )
 
+const Video = ({props}) => (
+  <div>
+    <video src={require('../../public/my-dinner1.mp4')} loop autoPlay muted />
+  </div>
+)
+
 const MDXComponents = {
   Image,
   a: CustomLink,
   heading2,
+  Video
 
 }
 
