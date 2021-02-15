@@ -1,9 +1,12 @@
+import '../styles/global.css'
+
 import { AppProps } from 'next/app'
 import {MDXProvider} from '@mdx-js/react'
 import { ThemeProvider } from 'next-themes';
 import MDXComponents from '../components/MDXComponents';
 
-import '../styles/index.css'
+
+
 
 
 
