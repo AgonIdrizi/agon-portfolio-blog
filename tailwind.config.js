@@ -1,11 +1,14 @@
 const { spacing, fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  purge: [
-    './components/**/*.{js,ts,jsx,tsx}',
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './layout/**/*.{js,ts,jsx,tsx}'
-  ],
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    content: [
+      './src/components/**/*.{js,ts,jsx,tsx}',
+      './src/pages/**/*.{js,ts,jsx,tsx}',
+      './src/layout/**/*.{js,ts,jsx,tsx}'
+    ]
+  },
   darkMode: 'class',
   future: {
     // removeDeprecatedGapUtilities: true,
@@ -14,16 +17,16 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        primary: 'var(--color-bg-primary)',
-        secondary: 'var(--color-bg-secondary)'
+        primary: '#090a11cc',
+        secondary: '#4a5568'
       },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans]
       },
       textColor: {
-        accent: 'var(--color-text-accent)',
-        primary: 'var(--color-text-primary)',
-        secondary: 'var(--color-text-secondary)'
+        accent: '#2b6cb0',
+        primary: '#2d3748',
+        secondary: '#4a5568'
       },
       hover: {
         primary: 'black',

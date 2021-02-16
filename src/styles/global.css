@@ -1,24 +1,6 @@
-/* purgecss start ignore */
 @tailwind base;
 @tailwind components;
-/* purgecss end ignore */
 @tailwind utilities;
-
-.dark {
-  --color-bg-primary: #090a11cc;
-  --color-bg-secondary: #4a5568;
-  --color-text-primary: #f7fafc;
-  --color-text-secondary: #e2e8f0;
-  --color-text-accent: #4b5563;
-}
-
-.light {
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #edf2f7;
-  --color-text-primary: #2d3748;
-  --color-text-secondary: #4a5568;
-  --color-text-accent: #2b6cb0;
-}
 
 @font-face {
   font-family: 'Inter';
