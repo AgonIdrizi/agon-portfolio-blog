@@ -20,7 +20,7 @@ const Container = (props) => {
   };
 
   return (
-    <div className={` bg-primary dark:bg-secondary  home-container`}>
+    <div className={` bg-white dark:bg-secondary  home-container`}>
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />

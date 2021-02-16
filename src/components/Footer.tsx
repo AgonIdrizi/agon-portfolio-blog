@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex justify-center">
-        <span className="text-gray-400 text-sm md:text-base lg:text-base mx-auto">© Copyright 2021 Agon Idrizi</span>
+        <span className="text-gray-400 text-sm mx-auto">© Copyright 2021 Agon Idrizi</span>
       </div>
     </footer>
   );

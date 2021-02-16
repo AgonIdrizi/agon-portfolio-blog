@@ -15,7 +15,7 @@ export default function ProjectLayout({ children, frontMatter}) {
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-primary dark:text-white">
           {frontMatter.title}
         </h1>
-        <h2 className="font-bold text-xl md:text-2xl tracking-tight mb-4 text-primary dark:text-gray-200">
+        <h2 className=" text-primary dark:text-gray-200 font-bold text-xl md:text-2xl tracking-tight mb-4 ">
           {frontMatter.summary}
         </h2>
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center w-full mt-2 mb-8">

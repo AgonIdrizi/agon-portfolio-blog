@@ -17,7 +17,7 @@ const CustomLink = (props) => {
 }
 
 const heading2 = ({children}) => (
-  <h2 className="text-2xl font-bold tracking-tight text-primary dark:text-gray-100">{children}</h2>
+  <h2 className="text-2xl font-bold tracking-tight text-primary !important dark:text-gray-100">{children}</h2>
 )
 
 const Video = ({props}) => (
