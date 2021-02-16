@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const NextLink = ({title, href}) => (
   <Link href={href}>
-    <a className={`font-medium text-secondary m-2 hover:text-red-400 cursor-pointer`}>
+    <a className={`font-medium text-secondary dark:text-gray-200 m-2 hover:text-red-400 cursor-pointer`}>
       {title}
     </a>
   </Link>
