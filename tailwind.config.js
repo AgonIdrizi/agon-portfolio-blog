@@ -1,7 +1,11 @@
 const { spacing, fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  purge: ['./components/**/*.tsx', './pages/**/*.tsx', './layout/**/*.tsx'],
+  purge: [
+    './components/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './layout/**/*.{js,ts,jsx,tsx}'
+  ],
   darkMode: 'class',
   future: {
     // removeDeprecatedGapUtilities: true,
@@ -96,5 +100,6 @@ module.exports = {
   variants: {
     typography: ['dark']
   },
+  // eslint-disable-next-line global-require
   plugins: [require('@tailwindcss/typography')]
 };
