@@ -1,16 +1,12 @@
 const { spacing, fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
+  purge: ['./components/**/*.tsx', './pages/**/*.tsx', './layout/**/*.tsx'],
   darkMode: 'class',
   future: {
     // removeDeprecatedGapUtilities: true,
     // purgeLayersByDefault: true,
   },
-  purge: [
-    './components/**/*.{ts,tsx,js,jsx}',
-    './pages/**/*.{ts,tsx,js,jsx}',
-    './layouts/**/*.{ts,tsx,js,jsx}'
-  ],
   theme: {
     extend: {
       backgroundColor: {
