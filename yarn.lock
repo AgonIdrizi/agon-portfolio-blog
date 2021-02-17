@@ -2008,6 +2008,11 @@
   dependencies:
     mkdirp "^1.0.4"
 
+"@panelbear/panelbear-js@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@panelbear/panelbear-js/-/panelbear-js-1.2.0.tgz#1037598fd2d310fcdc88d4447cfbc0d2833d2c25"
+  integrity sha512-wCet7ChsO313S0YpOXLAi5R3vIk38ckoDF5yHQ3wU6OV73tY4PijBex3Y+Nf4/EPakAAGoJjW8WSBtCXcxJchg==
+
 "@tailwindcss/typography@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.4.0.tgz#b80974ad6af93df7b06e1981cb4d79698b6ad5c7"
