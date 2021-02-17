@@ -3,6 +3,6 @@ const withVideos = require('next-videos');
 
 module.exports = withPlugins([withVideos()], {
   images: {
-    domains: ['localhost']
+    domains: ['agonidrizi.com', 'localhost']
   }
 });
