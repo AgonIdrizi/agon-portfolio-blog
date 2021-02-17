@@ -16,7 +16,7 @@ const NavLinks = ({
     { section: "About", ref: aboutDivRef },
   ];
   const [visibleSection] = useScrollToVisible(headerRef, sectionRefs);
-
+  
   return (
     <div className="navlinks flex">
       {sectionRefs.map(({ section, ref }) => (

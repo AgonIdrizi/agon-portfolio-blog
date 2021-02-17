@@ -63,6 +63,13 @@ input:checked ~ .toggle__dot {
   background-color: #f8d9d9;
 }
 
+.disable-select {
+  user-select: none; /* standerd */
+  -moz-user-select: none; /* firefox specific */
+  -webkit-user-select: none; /* Chrome, Opera and Safari*/
+  -ms-user-select: none; /* IE, ms-edge */
+}
+
 .prose pre {
   @apply bg-gray-50 border border-gray-200 dark:border-gray-700 dark:bg-gray-900;
 }
