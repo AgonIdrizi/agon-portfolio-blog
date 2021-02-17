@@ -20,8 +20,8 @@ A starter project in [Next.js](https://www.nextjs.org/) with
 
 ## Setup
 
-- `git clone git@github.com:AgonIdrizi/agon.dev.git`
-- `cd agon.dev`
+- `git clone git@github.com:AgonIdrizi/agon-portfolio-blog.git`
+- `cd agon-portfolio-blog`
 - `yarn`
 - `yarn dev`
 - visit http://localhost:3000
