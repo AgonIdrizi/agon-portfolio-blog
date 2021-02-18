@@ -27,7 +27,7 @@ const Container = (props) => {
         <meta content={meta.description} name="description" />
         <meta property="og:url" content={`https://agon.dev${router.asPath}`} />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Lee Robinson" />
+        <meta property="og:site_name" content="Agon Idrizi" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
