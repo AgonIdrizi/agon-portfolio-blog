@@ -31,19 +31,28 @@ html {
   min-height: 100vh;
 }
 
-.home-container {
-  transition: background-color 0.5s ease;
-}
-
 .navbar {
   position: sticky;
   z-index: 10;
   top: 0;
-  transition: background-color 0.1 ease-in-out;
   transition: top 0.4s;
 }
-.navbar-effect {
-  backdrop-filter: saturate(110%) blur(20px);
+
+@supports (backdrop-filter: saturate(110%) blur(20px)) {
+  .navbar-effect {
+    backdrop-filter: saturate(110%) blur(20px);
+  }
+  .home-container {
+    transition: background-color 0.5s ease;
+  }
+}
+
+@supports not (backdrop-filter: saturate(110%) blur(20px)) {
+  .navbar {
+    @apply bg-opacity-80 bg-white dark:bg-secondary;
+  }
+  .home-container {
+  }
 }
 
 .content {

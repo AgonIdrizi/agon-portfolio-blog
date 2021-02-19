@@ -20,7 +20,7 @@ const Container = (props) => {
   };
 
   return (
-    <div className={` bg-white dark:bg-secondary  home-container`}>
+    <div className={` bg-white dark:bg-secondary home-container `}>
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -40,7 +40,7 @@ const Container = (props) => {
         )}
       </Head>
       <Header refs={refs}  />
-      <main className="flex flex-col justify-center px-8"> 
+      <main className="flex flex-col justify-center px-8 "> 
       {children}
       <Footer />
       </main>

@@ -33,7 +33,7 @@ export default function Home() {
               slug="st-logic" 
               icon="" />
             <ProjectCard title="My Dinner" description="My dinner is a web application for order/delivery of food" slug="my-dinner" icon="" />
-            <ProjectCard title="Agon.dev" description="My personal portfolio built with Next.js" slug="agon-portfolio" icon="" />
+            <ProjectCard title="Agon.portfolio" description="My personal portfolio built with Next.js" slug="agon-portfolio" icon="" />
           </div>
         </section>
         <section className="projects-section flex flex-col w-500  pt-4 sm:pt-8  justify-center place-items-start">
